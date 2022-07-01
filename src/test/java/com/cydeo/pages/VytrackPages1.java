@@ -6,6 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class VytrackPages1 {
+
     public VytrackPages1(){
         PageFactory.initElements(Driver.getDriver(), this);
     }

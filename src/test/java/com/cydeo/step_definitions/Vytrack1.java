@@ -6,6 +6,8 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Vytrack1 {
     @Given("user is on the log in page")
@@ -22,12 +24,18 @@ public class Vytrack1 {
 
     }
     @When("user is on the home page")
-    public void user_is_on_the_home_page() {
-        String title = Driver.getDriver().getTitle();
+    public void user_is_on_the_home_page() throws InterruptedException {
+
         String expectedTitle = "Dashboard";
+
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(),20);
+        wait.until(ExpectedConditions.titleIs(expectedTitle));
+        String title = Driver.getDriver().getTitle();
+
         Assert.assertEquals(title, expectedTitle);
 
     }
+
     @When("user clicks on the Fleet tap")
     public void user_clicks_on_the_fleet_tap() {
 
@@ -46,4 +54,7 @@ public class Vytrack1 {
 
     }
 
+    @Then("user find & clicks Export Grid dropdown on the left of page")
+    public void userFindClicksExportGridDropdownOnTheLeftOfPage() {
+    }
 }

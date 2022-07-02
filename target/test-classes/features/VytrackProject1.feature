@@ -12,4 +12,7 @@ Feature: Clicking Export Grid dropdown
     When user clicks on the Fleet tap
     And user selects Vehicle dropdown button
     And user is on the Car Homepage
-    Then user clicks Export Grid dropdown
+    Then user find & clicks Export Grid dropdown on the left of page
+
+
+

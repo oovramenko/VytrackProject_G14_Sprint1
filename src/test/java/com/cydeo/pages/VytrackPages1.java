@@ -19,7 +19,7 @@ public class VytrackPages1 {
     @FindBy(id = "_submit")
     public WebElement clickButton;
 
-    @FindBy(xpath = "//span[@class='title title-level-1'])[1]")
+    @FindBy(xpath = "(//span[@class='title title-level-1'])[1]")
     public WebElement fleetButton;
 
     @FindBy(xpath = "//span[.='Vehicles']")
@@ -27,5 +27,17 @@ public class VytrackPages1 {
 
     @FindBy(xpath = "//a[@title='With this button you will export the content of the grid as it appears to you, with filters and sorting applied. All pages will be exported.']")
     public WebElement ExportGridButton;
+
+    @FindBy(css = ".fa-repeat")
+    public WebElement refreshBtn;
+
+    @FindBy(className = "fa-refresh")
+    public WebElement resetBtn;
+
+    @FindBy(xpath = "//i[@class='fa-chevron-right hide-text']")
+    public WebElement nextBtn;
+
+    @FindBy(xpath = "//input[@type='number']")
+    public WebElement pageNumber;
 
 }

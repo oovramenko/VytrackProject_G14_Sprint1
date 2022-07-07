@@ -79,13 +79,16 @@ public class Vytrack1 {
     public void userShouldBeAbleClickResetButton() throws InterruptedException {
         System.out.println("vytrackPages1.resetBtn.isEnabled() = " + vytrackPages1.resetBtn.isEnabled());
 
+//        Thread.sleep(2000);
         vytrackPages1.nextBtn.click();
-        Thread.sleep(2000);
+//        Thread.sleep(2000);
         System.out.println("vytrackPages1.pageNumber.getAttribute(\"value\") = " + vytrackPages1.pageNumber.getAttribute("value"));
+//        Thread.sleep(2000);
         vytrackPages1.resetBtn.click();
+        Thread.sleep(2000);
         String actualPageNum = vytrackPages1.pageNumber.getAttribute("value");
+//        Thread.sleep(2000);
         Assert.assertEquals("1", actualPageNum );
-
 
     }
 

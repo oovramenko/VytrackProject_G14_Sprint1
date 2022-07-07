@@ -28,11 +28,11 @@ public class VytrackPages1 {
     @FindBy(xpath = "//a[@title='With this button you will export the content of the grid as it appears to you, with filters and sorting applied. All pages will be exported.']")
     public WebElement ExportGridButton;
 
-    @FindBy(css = ".fa-repeat")
-    public WebElement refreshBtn;
-
-    @FindBy(className = "fa-refresh")
+    @FindBy(xpath = "//a[@title='Reset']")
     public WebElement resetBtn;
+
+    @FindBy(xpath = "//a[@title='Refresh']")
+    public WebElement refreshBtn;
 
     @FindBy(xpath = "//i[@class='fa-chevron-right hide-text']")
     public WebElement nextBtn;

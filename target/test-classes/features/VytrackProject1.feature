@@ -12,4 +12,8 @@ Feature: Clicking Export Grid dropdown
     When user clicks on the Fleet tap
     And user selects Vehicle dropdown button
     And user is on the Car Homepage
-    Then user clicks Export Grid dropdown
+    And user clicks Export Grid dropdown
+    And user should see Export Grid dropdown is on the left of the page
+    And User should be able to click refresh button
+    Then User should be able click reset button
+

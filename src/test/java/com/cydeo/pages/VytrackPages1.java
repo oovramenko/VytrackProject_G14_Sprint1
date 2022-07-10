@@ -1,6 +1,7 @@
 package com.cydeo.pages;
 
 import com.cydeo.utilities.Driver;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -39,5 +40,20 @@ public class VytrackPages1 {
 
     @FindBy(xpath = "//input[@type='number']")
     public WebElement pageNumber;
+
+    @FindBy(xpath = "//i[@class='fa-cog hide-text']")
+    public WebElement GridSettingsBtn;
+
+    public boolean ifButtonOnTheLeft(String buttonOne, String buttonTwo){
+        boolean check = false;
+        String xpath = "";
+        xpath = "//a[@title='"+buttonOne+"']/..//preceding-sibling::a[@title='"+buttonTwo+"']";
+        WebElement element = Driver.getDriver().findElement(By.xpath(xpath));
+        if(element.isDisplayed()){
+            check=true;
+        }
+        return check;
+
+    }
 
 }

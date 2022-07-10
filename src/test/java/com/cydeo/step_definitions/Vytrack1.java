@@ -92,4 +92,14 @@ public class Vytrack1 {
 
     }
 
+    @Then("User should be able to click Grid Settings button")
+    public void userShouldBeAbleToClickGridSettingsButton() {
+        System.out.println("vytrackPages1.GridSettingsBtn.isDisplayed() = " + vytrackPages1.GridSettingsBtn.isDisplayed());
+    }
+
+    @Then("user should see Refresh button on the left side of Reset button")
+    public void userShouldSeeRefreshButtonOnTheLeftSideOfResetButton() {
+        //System.out.println("vytrackPages1.refreshBtn.getLocation() = " + vytrackPages1.refreshBtn.getLocation());
+        System.out.println("vytrackPages1.ifButtonOnTheLeft(\"Refresh\", \"Reset\") = " + vytrackPages1.ifButtonOnTheLeft("Refresh", "Reset"));
+    }
 }
